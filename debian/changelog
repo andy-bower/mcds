@@ -1,0 +1,5 @@
+mcds (1.6-1) UNRELEASED; urgency=medium
+
+  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+
+ -- Andrew Bower <andrew@bower.uk>  Sun, 21 Apr 2024 11:30:42 +0100
