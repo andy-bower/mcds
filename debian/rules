@@ -13,9 +13,14 @@ export DEB_CFLAGS_MAINT_APPEND  = -Wall -pedantic -Werror -Wno-error=date-time
 # package maintainers to append LDFLAGS
 export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
 
+include /usr/share/dpkg/pkg-info.mk
 
 %:
 	dh $@
+
+override_dh_autoreconf:
+	sed -Ei "s/^(AC_INIT\(.*),.*,(.*)$$/\1,\ [$(DEB_VERSION_UPSTREAM)],\2/g" configure.ac
+	dh_autoreconf
 
 override_dh_installchangelogs:
 	dh_installchangelogs ChangeLog
