@@ -1,6 +1,7 @@
 From: Andrew Bower <andrew@bower.uk>
 Date: Tue, 23 Apr 2024 23:09:16 +0100
 Subject: Format size_t correctly on i386 (-Wformat)
+Forwarded: https://github.com/t-brown/mcds/pull/18/commits/5766af33556bea98a1bf031be05aa0b27dbfdc59
 
 ---
  src/mem.c | 2 +-

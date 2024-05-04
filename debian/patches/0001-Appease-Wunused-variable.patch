@@ -1,6 +1,7 @@
 From: Andrew Bower <andrew@bower.uk>
 Date: Tue, 23 Apr 2024 19:34:45 +0100
 Subject: Appease -Wunused-variable
+Forwarded: https://github.com/t-brown/mcds/pull/18/commits/c30b7dd7f0c278522c1d1ec2a6342bdb7b43d15a
 
 ---
  src/rc.c | 2 ++
