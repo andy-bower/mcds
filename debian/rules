@@ -1,16 +1,7 @@
 #!/usr/bin/make -f
-# See debhelper(7) (uncomment to enable)
-# output every command that modifies files on the build system.
-#export DH_VERBOSE = 1
 
-
-# see FEATURE AREAS in dpkg-buildflags(1)
 export DEB_BUILD_MAINT_OPTIONS = hardening=+all
-
-# see ENVIRONMENT in dpkg-buildflags(1)
-# package maintainers to append CFLAGS
 export DEB_CFLAGS_MAINT_APPEND  = -Wall -pedantic -Werror -Wno-error=date-time
-# package maintainers to append LDFLAGS
 export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
 
 include /usr/share/dpkg/pkg-info.mk
@@ -18,9 +9,17 @@ include /usr/share/dpkg/pkg-info.mk
 %:
 	dh $@
 
+override_dh_clean:
+	dh_clean build-aux/ src/config.h.in
+
 override_dh_autoreconf:
+	# Overwrite upstream version number to accomodate any upstream commits
+	# taken since the last upstream tagged release.
+	cp configure.ac configure.ac.stash
 	sed -Ei "s/^(AC_INIT\(.*),.*,(.*)$$/\1,\ [$(DEB_VERSION_UPSTREAM)],\2/g" configure.ac
 	dh_autoreconf
+	# Restore stashed version
+	mv configure.ac.stash configure.ac
 
 override_dh_installchangelogs:
 	dh_installchangelogs ChangeLog
