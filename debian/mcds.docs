@@ -1,3 +1,7 @@
 README.md
 AUTHORS
 NEWS
+
+# Not shipped:
+#ABOUT-NLS - excessive size for little value to users
+#LICENSE   - verbatim copy available in /usr/share/common-licenses
