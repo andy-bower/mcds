@@ -15,10 +15,6 @@ Files: src/gettext.h
 Copyright: 1995-1998, 2000-2002, 2004-2006, 2009, Free Software Foundation, Inc.
 License: GPL-3+
 
-Files: src/mcds.1
-Copyright: 2014, Free Software Foundation, Inc.
-License: GPL-3+
-
 License: Expat
  Permission is hereby granted, free of charge, to any person obtaining
  a copy of this software and associated documentation files (the
