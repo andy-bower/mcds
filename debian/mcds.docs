@@ -1,7 +1,7 @@
 README.md
-AUTHORS
-NEWS
 
 # Not shipped:
+#AUTHORS   - redundant information
+#NEWS      - out of date
 #ABOUT-NLS - excessive size for little value to users
 #LICENSE   - verbatim copy available in /usr/share/common-licenses

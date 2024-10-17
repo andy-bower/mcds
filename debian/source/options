@@ -1,1 +1,0 @@
-extend-diff-ignore = "(^|/)(src/config.h.in|build-aux/.*)$"
