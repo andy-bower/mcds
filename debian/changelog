@@ -1,5 +1,5 @@
-mcds (1.6+2024101718.git3fec633-1) unstable; urgency=medium
+mcds (1.6+20241018.gitec97be3-1) unstable; urgency=medium
 
   * Initial release (Closes: #1085180)
 
- -- Andrew Bower <andrew@bower.uk>  Thu, 17 Oct 2024 21:55:00 +0100
+ -- Andrew Bower <andrew@bower.uk>  Fri, 18 Oct 2024 08:56:00 +0100

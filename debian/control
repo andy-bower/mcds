@@ -13,6 +13,6 @@ Package: mcds
 Architecture: any
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: Mutt CardDav search program
+Description: Mutt CardDAV search utility
  mcds is a command line tool primarily used as a search query plugin for mutt
- to query a CardDav server.
+ to query a CardDAV server.
