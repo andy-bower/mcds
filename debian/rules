@@ -18,5 +18,6 @@ override_dh_autoreconf:
 	# Restore stashed version
 	mv configure.ac.stash configure.ac
 
-override_dh_installchangelogs:
-	dh_installchangelogs ChangeLog
+# Omit out-dated changelog.
+#override_dh_installchangelogs:
+#	dh_installchangelogs ChangeLog
