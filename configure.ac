@@ -50,6 +50,10 @@ AC_CONFIG_FILES([Makefile
 
 PKG_CHECK_MODULES([CURL], [libcurl])
 PKG_CHECK_MODULES([XML], [libxml-2.0])
+PKG_CHECK_MODULES([SECRET], [libsecret-1])
+
+AC_SUBST(LIBSECRET_CFLAGS)
+AC_SUBST(LIBSECRET_LIBS)
 
 dnl locate gpgme and gpg
 AH_TEMPLATE([GPGME_CONFIG], [Defined to the full path of gpgme-config])
