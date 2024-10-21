@@ -187,6 +187,7 @@ parse_argv(int argc, char **argv, char **file)
 		{"url",        required_argument,  NULL,  'u'},
 		{"version",    no_argument,        NULL,  'V'},
 		{"verbose",    no_argument,        NULL,  'v'},
+		{"password",   no_argument,        NULL,  'p'},
 		{NULL,         1,                  NULL,  0}
 	};
 
@@ -203,6 +204,9 @@ parse_argv(int argc, char **argv, char **file)
 			break;
 		case 'h':
 			print_usage();
+			break;
+		case 'p':
+			options.pwprompt = 1;
 			break;
 		case 'q':
 			if (optarg[0] == 'a' ||

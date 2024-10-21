@@ -178,7 +178,14 @@ read_rc(const char *file)
 		abs_file = NULL;
 	}
 
-	if (pfile) {
+	if (options.pwprompt) {
+		lookup_password();
+		if (options.password == NULL) {
+		}
+	}
+
+	if (options.password == NULL &&
+	    pfile) {
 #if HAVE_GPGME == 1
 		if (pfile[0] == '~' && pfile[1] == '/') {
 			home = getenv("HOME");
@@ -233,7 +240,8 @@ read_rc(const char *file)
 		}
 #endif
 	}
-	if (options.netrc == 1) {
+	if (options.password = NULL &&
+	    options.netrc == 1) {
 		home = getenv("HOME");
 		if (home == NULL) {
 			warnx(_("Unable to obtain home directory"));

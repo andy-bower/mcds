@@ -27,6 +27,8 @@
 #ifndef MCDS_SCRET_H
 #define MCDS_SECRET_H
 
+#include <libsecret/secret.h>
+
 #ifdef __cplusplus
 extern "C"
 {
@@ -39,7 +41,7 @@ extern "C"
 
 
 /** Get schema for the secret store */
-const SecretSchema *mcds_get_schema(void) G_GNUC_CONST;
+//const SecretSchema *mcds_get_schema(void) G_GNUC_CONST;
 
 void store_password(void);
 void lookup_password(void);

@@ -49,6 +49,7 @@ struct opts {
 	int verbose;
 	int verify;
 	int netrc;
+	int pwprompt;
 	enum s_terms query;
 	enum s_terms search;
 	char *url;

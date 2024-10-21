@@ -53,7 +53,7 @@
  * \retval 0 If there were no errors.
  * \retval 1 If an error was encounted.
  **/
-const SecretSchema *
+static const SecretSchema *
 get_secret_schema(void)
 {
 	static const SecretSchema the_schema = {
@@ -73,7 +73,7 @@ store_password(void)
 {
 	GError *error = NULL;
 
-	secret_password_store_sync(MCDS_SECRET_SCHEMA,
+	secret_password_store_sync(get_secret_schema(),
 				   SECRET_COLLECTION_DEFAULT,
 				   "Mutt CardDAV Search user credentials",
 				   options.password,
@@ -94,7 +94,7 @@ lookup_password(void)
 {
 	GError *error = NULL;
 
-	gchar *password = secret_password_lookup_sync(MCDS_SECRET_SCHEMA,
+	gchar *password = secret_password_lookup_sync(get_secret_schema(),
 						      NULL, &error,
 						      MCDS_SECRET_KEY_URL, options.url,
 						      MCDS_SECRET_KEY_USER, options.username,
